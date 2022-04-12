@@ -4,18 +4,18 @@
   <ItemGroup Condition="'$(IncludeCommonCode)' == 'true'">
     <Compile Include="$(CommonPath)/CoreWCF/**/*.cs" Exclude="$(CommonPath)/CoreWCF/SR.cs">
       <Visible>true</Visible>
-      <Link>shared/CoreWCF/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>Shared1/CoreWCF/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Compile>
     <Compile Include="$(CommonPath)/DuplexChannels/**/*.cs" Condition="'$(IncludeSharedDuplexChannelSource)' == 'True'">
       <Visible>true</Visible>
-      <Link>shared/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>Shared2/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Compile>
   </ItemGroup>
 
   <ItemGroup Condition="($(IsTestProject) AND !($(IsBuildToolsProject)))">
     <Compile Include="$(CommonTestPath)/**/*.cs">
       <Visible>true</Visible>
-      <Link>shared/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>Shared3/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Compile>
   </ItemGroup>
 
