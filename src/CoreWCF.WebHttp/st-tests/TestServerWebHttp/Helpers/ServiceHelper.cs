@@ -26,7 +26,7 @@ namespace Helpers
             .UseKestrel(options =>
             {
                 options.AllowSynchronousIO = true;
-                options.Listen(IPAddress.Loopback, 8080, listenOptions =>
+                options.Listen(IPAddress.Any, 8080, listenOptions =>
                 {
                     if (Debugger.IsAttached)
                     {

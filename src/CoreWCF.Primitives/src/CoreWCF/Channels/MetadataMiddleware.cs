@@ -106,9 +106,9 @@ namespace CoreWCF.Channels
 
             foreach (Type serviceType in _serviceBuilder.Services)
             {
-                void MapMetadata(IApplicationBuilder app, string path, Func<RequestDelegate, RequestDelegate> middleware)
+                void MapMetadata(IApplicationBuilder app, string path, Func<RequestDelegate, RequestDelegate> middleware, Uri metadataUri)
                 {
-                    _logger.LogInformation($"Configuring metadata to {path}");
+                    _logger.LogInformation($"Configuring metadata to {path} for '{metadataUri}'");
                     app.Use(middleware);
                 }
 
@@ -185,7 +185,7 @@ namespace CoreWCF.Channels
 
                     if(httpMetadataUri != null)
                     {
-                        MapMetadata(branchApp, httpMetadataUri.AbsolutePath, metadataExtension.CreateMiddleware(httpMetadataUri, false));
+                        MapMetadata(branchApp, httpMetadataUri.AbsolutePath, metadataExtension.CreateMiddleware(httpMetadataUri, false), httpMetadataUri);
                     }
                 }
 
@@ -204,7 +204,7 @@ namespace CoreWCF.Channels
                     if (helpPageUri != null && !helpPageUri.Equals(httpMetadataUri))
                     {
                         // Only map the help page uri if it's not null, and different from http metadata uri.
-                        MapMetadata(branchApp, helpPageUri.AbsolutePath, metadataExtension.CreateMiddleware(helpPageUri, false));
+                        MapMetadata(branchApp, helpPageUri.AbsolutePath, metadataExtension.CreateMiddleware(helpPageUri, false), helpPageUri);
                     }
                 }
 
@@ -222,7 +222,7 @@ namespace CoreWCF.Channels
 
                     if (httpsMetadataUri != null)
                     {
-                        MapMetadata(branchApp, httpsMetadataUri.AbsolutePath, metadataExtension.CreateMiddleware(httpsMetadataUri, true));
+                        MapMetadata(branchApp, httpsMetadataUri.AbsolutePath, metadataExtension.CreateMiddleware(httpsMetadataUri, true), httpsMetadataUri);
                     }
                 }
 
@@ -241,7 +241,7 @@ namespace CoreWCF.Channels
                     if (helpPageUri != null && !helpPageUri.Equals(httpsMetadataUri))
                     {
                         // Only map the help page uri if it's not null, and different from https metadata uri.
-                        MapMetadata(branchApp, helpPageUri.AbsolutePath, metadataExtension.CreateMiddleware(helpPageUri, true));
+                        MapMetadata(branchApp, helpPageUri.AbsolutePath, metadataExtension.CreateMiddleware(helpPageUri, true), helpPageUri);
                     }
                 }
             }
