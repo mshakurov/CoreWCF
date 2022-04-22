@@ -1,6 +1,4 @@
-﻿using System;
-
-using CoreWCF;
+﻿using CoreWCF;
 using CoreWCF.Web;
 
 namespace ST.BusinessEntity.Server
