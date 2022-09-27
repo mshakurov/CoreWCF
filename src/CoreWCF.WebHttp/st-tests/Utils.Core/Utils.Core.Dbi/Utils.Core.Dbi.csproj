@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!--<Nullable>enable</Nullable>-->
+    <AssemblyName>ST.Utils.Core.Dbi</AssemblyName>
+    <RootNamespace>ST.Utils.Core.Dbi</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="6.10.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Utils.Core.CoreWCF\Utils.Core.CoreWCF.csproj" />
+    <ProjectReference Include="..\Utils.Core\Utils.Core.csproj" />
+  </ItemGroup>
+
+</Project>

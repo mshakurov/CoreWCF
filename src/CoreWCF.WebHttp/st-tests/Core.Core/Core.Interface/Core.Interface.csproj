@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!--<Nullable>enable</Nullable>-->
+    <AssemblyName>ST.Core.Interface</AssemblyName>
+    <RootNamespace>ST.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="6.10.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utils.Core\Utils.Core.CoreWCF\Utils.Core.CoreWCF.csproj" />
+    <ProjectReference Include="..\..\Utils.Core\Utils.Core\Utils.Core.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="Resources.Identifiers.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.en.resx" />
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResIdGenerator</Generator>
+      <LastGenOutput>Resources.Identifiers.cs</LastGenOutput>
+      <CustomToolNamespace>ST.Core.Interface</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

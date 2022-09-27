@@ -1,0 +1,1 @@
+docker run -it --rm --name st.utils.core.test st.utils.core.test

@@ -3,6 +3,7 @@
 
 using System;
 using System.Linq;
+using System.Threading;
 
 using ST.BusinessEntity.Server;
 
@@ -10,7 +11,17 @@ namespace Services
 {
     internal class EntityTypeService : IEntityType
     {
+        private static int _id = 0;
+        private readonly int Id;
+
         private static Random s_random = new Random();
+
+        public EntityTypeService()
+        {
+            Id = Interlocked.Increment(ref _id);
+        }
+
+        public int GetId() => Id;
 
         public EntityType GetEntityType(int entityTypeId, EntityQueryOption options = EntityQueryOption.Default, EntityTypeResult result = EntityTypeResult.Default) => new EntityType
         {

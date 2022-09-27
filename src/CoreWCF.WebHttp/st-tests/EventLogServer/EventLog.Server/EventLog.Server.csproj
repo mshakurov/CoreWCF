@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <!--<ImplicitUsings>enable</ImplicitUsings>-->
+    <Nullable>enable</Nullable>
+    <AssemblyName>ST.EventLog.Server</AssemblyName>
+    <RootNamespace>ST.EventLog.Server</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EventLog.Server.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core.Core\Core.Interface\Core.Interface.csproj" />
+    <ProjectReference Include="..\..\Server.Core\Server.Interface\Server.Interface.csproj" />
+    <ProjectReference Include="..\EventLog.Server.Interface\EventLog.Server.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

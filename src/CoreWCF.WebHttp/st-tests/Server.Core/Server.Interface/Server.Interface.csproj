@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ST.Server.Interface</AssemblyName>
+    <RootNamespace>ST.Server.Interface</RootNamespace>
+    <!--<Nullable>enable</Nullable>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Server.Interface.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core.Core\Core.Interface\Core.Interface.csproj" />
+    <ProjectReference Include="..\..\Utils.Core\Utils.Core.CoreWCF\Utils.Core.CoreWCF.csproj" />
+    <ProjectReference Include="..\..\Utils.Core\Utils.Core.Dbi\Utils.Core.Dbi.csproj" />
+    <ProjectReference Include="..\..\Utils.Core\Utils.Core\Utils.Core.csproj" />
+  </ItemGroup>
+
+</Project>

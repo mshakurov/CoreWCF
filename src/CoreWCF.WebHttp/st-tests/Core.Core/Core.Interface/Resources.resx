@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessDeniedError" xml:space="preserve">
+    <value>Недостаточно разрешений доступа для выполнения операции.</value>
+  </data>
+  <data name="ActionSupportedException" xml:space="preserve">
+    <value>Сервер не поддерживает этот метод</value>
+  </data>
+  <data name="AuthFailError" xml:space="preserve">
+    <value>Непредвиденная ошибка при попытке входа в систему.</value>
+  </data>
+  <data name="AuthIsNotAvailableError" xml:space="preserve">
+    <value>Сервер не позволят выполнить вход в систему, т.к. отсутствует необходимый для этого компонент.</value>
+  </data>
+  <data name="AuthLicenceError" xml:space="preserve">
+    <value>Не удается получить ключ лицензирования.</value>
+  </data>
+  <data name="CategoryDBConnection" xml:space="preserve">
+    <value>Соединение с БД</value>
+  </data>
+  <data name="DisplayNameDBConnection" xml:space="preserve">
+    <value>Параметры соединения</value>
+  </data>
+  <data name="DisplayNameDBConnection_PG" xml:space="preserve">
+    <value>Параметры соединения PostgreSQL</value>
+  </data>
+  <data name="InsufficientPermissions" xml:space="preserve">
+    <value>Отсутствует разрешение доступа</value>
+  </data>
+  <data name="InvalidCredentialsError" xml:space="preserve">
+    <value>Недопустимые параметры аутентификации.</value>
+  </data>
+  <data name="LogonFailedError" xml:space="preserve">
+    <value>Пользователя с логином '{0}' и указанным паролем не существует, либо пользователь отключен.</value>
+  </data>
+  <data name="MixedDbMode" xml:space="preserve">
+    <value>Включает смешанный режим БД - сначала PostgreSQL, а если ошибка то MSSQL (только для отладки).</value>
+  </data>
+  <data name="NotLoggedOnError" xml:space="preserve">
+    <value>Для выполнения операции требуется войти в систему.</value>
+  </data>
+  <data name="OrgGroupLicenceError" xml:space="preserve">
+    <value>Количество подключений превышает выделенное на группу организаций.</value>
+  </data>
+  <data name="RemoteAccessRequired" xml:space="preserve">
+    <value>Для входа на сервер под логином '{0}' требуется разрешение удаленного доступа.</value>
+  </data>
+  <data name="SessionAccessed" xml:space="preserve">
+    <value>Последний доступ: {0:dd.MM.yyyy HH:mm:ss}({1})</value>
+    <comment>{0} - время(DateTime), {1} - ip-адрес(string)</comment>
+  </data>
+  <data name="SessionCountLicenceError" xml:space="preserve">
+    <value>Превышено максимальное количество подключений для сервера приложений.</value>
+  </data>
+  <data name="SessionCreated" xml:space="preserve">
+    <value>Создана: {0:dd.MM.yyyy HH:mm:ss}({1})</value>
+    <comment>{0} - время(DateTime), {1} - ip-адрес(string)</comment>
+  </data>
+  <data name="SessionHeader" xml:space="preserve">
+    <value>Данные о сессии</value>
+  </data>
+  <data name="SessionId" xml:space="preserve">
+    <value>Идентификатор: {0}</value>
+    <comment>{0} - идентификатор(ulong)</comment>
+  </data>
+  <data name="SessionLogin" xml:space="preserve">
+    <value>Логин: {0}</value>
+    <comment>{0} - логин(string)</comment>
+  </data>
+  <data name="TCPIPOnlyAccessRequired" xml:space="preserve">
+    <value>Вход на сервер под логином '{0}' с использованием данной точки доступа запрещён.</value>
+  </data>
+  <data name="UnloadedModuleError" xml:space="preserve">
+    <value>Модуль '{0}' был выгружен и его попытка обращения к ядру была предотвращена.</value>
+  </data>
+  <data name="UnloadedTargetModuleError" xml:space="preserve">
+    <value>Модуль '{0}' попытался обратиться к выгруженному модулю '{1}' и данная попытка была предотвращена.</value>
+  </data>
+  <data name="UserAccountExpired" xml:space="preserve">
+    <value>Для пользователя с логином '{0}' истек срок действия учетной записи.</value>
+  </data>
+  <data name="UserEnterExist" xml:space="preserve">
+    <value>С предъявленными учетными данными уже осуществлён вход на другом устройстве.</value>
+  </data>
+  <data name="WindowsAuthenticationNotSupported" xml:space="preserve">
+    <value>Сервер не поддерживает подключение windows-пользователей.</value>
+  </data>
+</root>

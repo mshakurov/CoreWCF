@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ST.Server</AssemblyName>
+    <RootNamespace>ST.Server</RootNamespace>
+    <!--<Nullable>enable</Nullable>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Server.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core.Core\Core.Interface\Core.Interface.csproj" />
+    <ProjectReference Include="..\..\Core.Core\Core\Core.csproj" />
+    <ProjectReference Include="..\Server.Interface\Server.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

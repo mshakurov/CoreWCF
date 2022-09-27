@@ -10,6 +10,9 @@ namespace ST.BusinessEntity.Server
     [ServiceContract(Namespace = Constants.MODULE_NAMESPACE)]
     public interface IEntityType
     {
+        [WebGet(UriTemplate = "GetId", ResponseFormat = WebMessageFormat.Json)]
+        int GetId();
+
         /// <summary>
         /// Возвращает тип бизнес-сущности.
         /// </summary>

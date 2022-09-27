@@ -13,7 +13,7 @@ namespace Helpers
 {
     public static class ServiceHelper
     {
-        public static IWebHostBuilder CreateWebHostBuilder<TStartup>() where TStartup : class =>
+        public static IWebHostBuilder CreateWebHostBuilderAndUseStartup<TStartup>() where TStartup : class =>
             WebHost.CreateDefaultBuilder(Array.Empty<string>())
 #if DEBUG
             .ConfigureLogging((ILoggingBuilder logging) =>
@@ -37,7 +37,7 @@ namespace Helpers
             })
     .UseStartup<TStartup>();
 
-        public static IWebHostBuilder CreateWebHostBuilder<TStartup>(int port) where TStartup : class =>
+        public static IWebHostBuilder CreateWebHostBuilder(int port) =>
                 WebHost.CreateDefaultBuilder(Array.Empty<string>())
 #if DEBUG
             .ConfigureLogging((ILoggingBuilder logging) =>
@@ -61,7 +61,7 @@ namespace Helpers
             })
         ;
 
-        public static IWebHostBuilder CreateWebHostBuilderWithSsl<TStartup>() where TStartup : class =>
+        public static IWebHostBuilder CreateWebHostBuilderWithSslAndUseStartup<TStartup>() where TStartup : class =>
         WebHost.CreateDefaultBuilder(Array.Empty<string>())
 #if DEBUG
             .ConfigureLogging((ILoggingBuilder logging) =>

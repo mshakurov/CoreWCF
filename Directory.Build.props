@@ -12,7 +12,7 @@
     <MSBuildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBuildProjectExtensionsPath>
     <ProjectAssetsFile>$(BaseIntermediateOutputPath)/project.assets.json</ProjectAssetsFile>
     <WarningsAsErrors>CS4014</WarningsAsErrors>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>10</LangVersion>
   </PropertyGroup>
   <!-- Set up some common paths -->
   <PropertyGroup>
@@ -52,7 +52,7 @@
   </ItemGroup>
 
   <!-- Configuring strong name signing -->
-  <PropertyGroup Condition="!($(IsTestProject) OR $(IsSampleProject)) AND Exists('$(ProjectDir)corewcf.snk')">
+  <PropertyGroup Condition="!($(IsTestProject) OR $(IsSampleProject) OR $(IsSTTestProject)) AND Exists('$(ProjectDir)corewcf.snk')">
     <AssemblyOriginatorKeyFile>$(ProjectDir)corewcf.snk</AssemblyOriginatorKeyFile>
 	<SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>

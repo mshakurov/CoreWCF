@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath>..\bin</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="*.bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PostSharp" Version="6.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestPlatformAssemblyAttribute\TestPlatformAssemblyAttribute.csproj" />
+    <ProjectReference Include="..\Utils.Core\Utils.Core.csproj">
+      <CopyLocal>True</CopyLocal>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils.Core.Dbi\Utils.Core.Dbi.csproj" />
+  </ItemGroup>
+
+</Project>
